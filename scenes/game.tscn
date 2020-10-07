@@ -21,10 +21,24 @@ texture = SubResource( 2 )
 
 [node name="Baloes" type="Node2D" parent="."]
 
-[node name="Genarator" type="Timer" parent="."]
+[node name="GenaratorAleatoria" type="Timer" parent="."]
 wait_time = 1.5
 autostart = true
 
 [node name="InputProc" type="Node2D" parent="."]
 script = ExtResource( 2 )
-[connection signal="timeout" from="Genarator" to="." method="_on_Genarator_timeout"]
+
+[node name="GenaratorCerta" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Parar" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="GerarLetra" type="Timer" parent="."]
+wait_time = 2.0
+[connection signal="timeout" from="GenaratorAleatoria" to="." method="_on_Genarator_timeout"]
+[connection signal="timeout" from="GenaratorCerta" to="." method="_on_GenaratorCerta_timeout"]
+[connection signal="timeout" from="Parar" to="." method="_on_Parar_timeout"]
+[connection signal="timeout" from="GerarLetra" to="." method="_on_GerarLetra_timeout"]
