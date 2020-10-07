@@ -4,7 +4,7 @@ onready var shape = get_node("Shape")
 onready var sprite0 = get_node("Sprite0")
 onready var sprite1 = get_node("Sprite1")
 onready var limpar = get_node("Limpar")
-onready var animation = get_node("AnimationPlayer")
+onready var animation = get_node("Animation")
 
 func _ready():
 	randomize()
@@ -19,7 +19,7 @@ func _process(_delta):
 
 func born(inipos):
 	position = inipos
-	var inivel = Vector2(0, rand_range(-400, -100))
+	var inivel = Vector2(0, rand_range(-600, -200))
 	set_linear_velocity(inivel)
 
 func estourar():
@@ -28,9 +28,8 @@ func estourar():
 	#sprite0.visible = false
 	shape.queue_free()
 	sprite1.visible = true
-	animation.play("Teste")
+	animation.play("Estouro")
 	limpar.start()
 
 func _on_Limpar_timeout():
-	print("teste")
 	queue_free()

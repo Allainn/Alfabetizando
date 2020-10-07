@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/estouro.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
-resource_name = "Teste"
+resource_name = "Estouro"
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite1:scale")
@@ -44,6 +44,6 @@ position = Vector2( 0, -8 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Teste = SubResource( 1 )
+[node name="Animation" type="AnimationPlayer" parent="."]
+anims/Estouro = SubResource( 1 )
 [connection signal="timeout" from="Limpar" to="." method="_on_Limpar_timeout"]
