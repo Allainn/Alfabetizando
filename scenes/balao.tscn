@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/balao.png" type="Texture" id=1]
 [ext_resource path="res://scripts/balao.gd" type="Script" id=2]
 [ext_resource path="res://assets/estouro.png" type="Texture" id=3]
 [ext_resource path="res://assets/font160.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/estouro.ogg" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Estouro"
@@ -37,7 +38,7 @@ one_way_collision = true
 one_way_collision_margin = 0.0
 
 [node name="Limpar" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.25
 
 [node name="Sprite1" type="Sprite" parent="."]
 visible = false
@@ -59,4 +60,7 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioEstouro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 [connection signal="timeout" from="Limpar" to="." method="_on_Limpar_timeout"]

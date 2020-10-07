@@ -37,7 +37,7 @@ wait_time = 10.0
 autostart = true
 
 [node name="GerarLetra" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 2.7
 [connection signal="timeout" from="GenaratorAleatoria" to="." method="_on_Genarator_timeout"]
 [connection signal="timeout" from="GenaratorCerta" to="." method="_on_GenaratorCerta_timeout"]
 [connection signal="timeout" from="Parar" to="." method="_on_Parar_timeout"]

@@ -6,6 +6,7 @@ onready var sprite1 = get_node("Sprite1")
 onready var limpar = get_node("Limpar")
 onready var animation = get_node("Animation")
 onready var label = get_node("Letra")
+onready var audio = get_node("AudioEstouro")
 
 var letra
 var letra_certa
@@ -36,6 +37,7 @@ func estourar():
 	sprite1.visible = true
 	animation.play("Estouro")
 	limpar.start()
+	audio.play()
 	
 func errou():
 	estourar()

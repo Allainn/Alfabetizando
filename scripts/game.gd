@@ -15,7 +15,6 @@ var letra
 func _ready():
 	randomize()
 	gerar_letra()
-	letra="W"
 	pass # Replace with function body.
 
 func gerar_letra():
