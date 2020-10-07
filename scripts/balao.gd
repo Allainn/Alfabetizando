@@ -19,7 +19,7 @@ func _process(_delta):
 
 func born(inipos):
 	position = inipos
-	var inivel = Vector2(0, rand_range(-800, -200))
+	var inivel = Vector2(0, rand_range(-600, -200))
 	set_linear_velocity(inivel)
 
 func estourar():
