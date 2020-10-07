@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/balao.png" type="Texture" id=1]
+[ext_resource path="res://scripts/balao.gd" type="Script" id=2]
+[ext_resource path="res://assets/estouro.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Teste"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 0.3, 0.3 ) ]
+}
+
+[node name="Balao" type="RigidBody2D"]
+gravity_scale = -1.0
+script = ExtResource( 2 )
+
+[node name="Sprite0" type="Sprite" parent="."]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+
+[node name="Shape" type="CollisionPolygon2D" parent="."]
+position = Vector2( 1.35292, -5.02065 )
+scale = Vector2( 1.06115, 1.02745 )
+polygon = PoolVector2Array( 17.4932, 96.5768, 48.5228, 62.5095, 72.4233, 21.5855, 80.5644, -8.20811, 81.5655, -27.5633, 70.5364, -67.4081, 51.8648, -94.3495, 28.0269, -109.712, 0.0928876, -116.777, -26.3234, -110.93, -47.7081, -102.486, -67.8348, -84.2973, -79.7851, -55.0659, -82.1573, -28.6628, -79.7851, 1.44827, -60.2873, 48.8682, -32.3763, 84.7947, -3.68087, 109.929, 2.64664, 107.905, 8.57117, 103.693 )
+one_way_collision = true
+one_way_collision_margin = 0.0
+
+[node name="Limpar" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="Sprite1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -8 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Teste = SubResource( 1 )
+[connection signal="timeout" from="Limpar" to="." method="_on_Limpar_timeout"]
