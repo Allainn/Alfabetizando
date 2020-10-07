@@ -5,16 +5,24 @@ onready var sprite0 = get_node("Sprite0")
 onready var sprite1 = get_node("Sprite1")
 onready var limpar = get_node("Limpar")
 onready var animation = get_node("Animation")
+onready var label = get_node("Letra")
+
+var letras = ["A", "B", "C", "D", "E"]
+var letra
+var letra_certa
 
 func _ready():
 	randomize()
+	letra = letras[rand_range(0,5)]
+	label.set_text(letra)
 	#born(Vector2(630, 1500))
 	set_process(true)
 	
 func _process(_delta):
 	if position.y < -100:
-		print("perdeu")
-		#emit_signal("life")
+		if letra == letra_certa:
+			print("perdeu")
+			#emit_signal("life")
 		queue_free()
 
 func born(inipos):
@@ -30,6 +38,17 @@ func estourar():
 	sprite1.visible = true
 	animation.play("Estouro")
 	limpar.start()
+	
+func errou():
+	estourar()
+	print("Errou")
+	
+func acertou():
+	estourar()
+	print("Acertou")
 
 func _on_Limpar_timeout():
 	queue_free()
+	
+func set_letra_certa(letra):
+	letra_certa = letra
