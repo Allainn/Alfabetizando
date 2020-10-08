@@ -33,5 +33,5 @@ func pressed(pos):
 func released():
 	curpos = Vector2(0, 0)
 	
-func set_letra(letra):
-	self.letra = letra
+func set_letra(_letra):
+	letra = _letra

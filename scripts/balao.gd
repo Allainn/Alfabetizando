@@ -25,41 +25,41 @@ func cor_balao():
 	var cor_balao
 	var cor_estouro
 	if op == 0:
-		cor_balao = preload("res://assets/balao_amarelo.png")
-		cor_estouro = preload("res://assets/estouro_amarelo.png")
+		cor_balao = preload("res://assets/baloes/balao_amarelo.png")
+		cor_estouro = preload("res://assets/estouros/estouro_amarelo.png")
 	elif op == 1:
-		cor_balao = preload("res://assets/balao_azul.png")
-		cor_estouro = preload("res://assets/estouro_azul.png")
+		cor_balao = preload("res://assets/baloes/balao_azul.png")
+		cor_estouro = preload("res://assets/estouros/estouro_azul.png")
 	elif op == 2:
-		cor_balao = preload("res://assets/balao_azul_escuro.png")
-		cor_estouro = preload("res://assets/estouro_azul_escuro.png")
+		cor_balao = preload("res://assets/baloes/balao_azul_escuro.png")
+		cor_estouro = preload("res://assets/estouros/estouro_azul_escuro.png")
 	elif op == 3:
-		cor_balao = preload("res://assets/balao_azul_m.png")
-		cor_estouro = preload("res://assets/estouro_azul_m.png")
+		cor_balao = preload("res://assets/baloes/balao_azul_m.png")
+		cor_estouro = preload("res://assets/estouros/estouro_azul_m.png")
 	elif op == 4:
-		cor_balao = preload("res://assets/balao_azul_m_escuro.png")
-		cor_estouro = preload("res://assets/estouro_azul_m_escuro.png")
+		cor_balao = preload("res://assets/baloes/balao_azul_m_escuro.png")
+		cor_estouro = preload("res://assets/estouros/estouro_azul_m_escuro.png")
 	elif op == 5:
-		cor_balao = preload("res://assets/balao_branco.png")
-		cor_estouro = preload("res://assets/estouro_branco.png")
+		cor_balao = preload("res://assets/baloes/balao_branco.png")
+		cor_estouro = preload("res://assets/estouros/estouro_branco.png")
 	elif op == 6:
-		cor_balao = preload("res://assets/balao_magenta.png")
-		cor_estouro = preload("res://assets/estouro_magenta.png")
+		cor_balao = preload("res://assets/baloes/balao_magenta.png")
+		cor_estouro = preload("res://assets/estouros/estouro_magenta.png")
 	elif op == 7:
-		cor_balao = preload("res://assets/balao_marrom.png")
-		cor_estouro = preload("res://assets/estouro_marrom.png")
+		cor_balao = preload("res://assets/baloes/balao_marrom.png")
+		cor_estouro = preload("res://assets/estouros/estouro_marrom.png")
 	elif op == 8:
-		cor_balao = preload("res://assets/balao_roxo.png")
-		cor_estouro = preload("res://assets/estouro_roxo.png")
+		cor_balao = preload("res://assets/baloes/balao_roxo.png")
+		cor_estouro = preload("res://assets/estouros/estouro_roxo.png")
 	elif op == 9:
-		cor_balao = preload("res://assets/balao_verde.png")
-		cor_estouro = preload("res://assets/estouro_verde.png")
+		cor_balao = preload("res://assets/baloes/balao_verde.png")
+		cor_estouro = preload("res://assets/estouros/estouro_verde.png")
 	elif op == 10:
-		cor_balao = preload("res://assets/balao_verde_escuro.png")
-		cor_estouro = preload("res://assets/estouro_verde_escuro.png")
+		cor_balao = preload("res://assets/baloes/balao_verde_escuro.png")
+		cor_estouro = preload("res://assets/estouros/estouro_verde_escuro.png")
 	elif op == 11:
-		cor_balao = preload("res://assets/balao_vermelho.png")
-		cor_estouro = preload("res://assets/estouro_vermelho.png")
+		cor_balao = preload("res://assets/baloes/balao_vermelho.png")
+		cor_estouro = preload("res://assets/estouros/estouro_vermelho.png")
 	
 	sprite0.set_texture(cor_balao)
 	sprite1.set_texture(cor_estouro)
