@@ -12,6 +12,9 @@ var letras = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
 			  "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y", "W", "Z"]
 var letra
 
+var score = 0
+var lifes = 5
+
 func _ready():
 	randomize()
 	gerar_letra()
@@ -31,6 +34,9 @@ func _on_Genarator_timeout():
 	obj.set_letra(letra2)
 	obj.set_letra_certa(letra)
 	obj.born(Vector2(rand_range(90, 630), 1500))
+	
+	obj.connect("perde", self, "dec_life")
+	obj.connect("ponto", self, "inc_score")
 	
 	baloes.add_child(obj)
 
@@ -54,4 +60,18 @@ func _on_Parar_timeout():
 	genaratorAleatorio.stop()
 	genaratorCerta.stop()
 	gerarLetra.start()
+	
+func dec_life():
+	print("Entrou")
+	lifes -= 1
+	if lifes == 0:
+		print("GameOver")
+	else:
+		print("Lifes: ", lifes)
+		
+func inc_score():
+	if lifes == 0: return
+	score += 1
+	print("Score: ", score)
+	
 	

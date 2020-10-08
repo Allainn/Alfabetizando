@@ -8,14 +8,14 @@ onready var animation = get_node("Animation")
 onready var label = get_node("Letra")
 onready var audio = get_node("AudioEstouro")
 
+signal ponto
+signal perde
 
 var letra = "A"
 var letra_certa
 
 func _ready():
 	randomize()
-	#born(Vector2(630, 1500))
-	#sprite0.set_texture(cor)
 	cor_balao()
 	label.set_text(letra)
 	set_process(true)
@@ -67,8 +67,8 @@ func cor_balao():
 func _process(_delta):
 	if position.y < -100:
 		if letra == letra_certa:
+			emit_signal("perde")
 			print("perdeu")
-			#emit_signal("life")
 		queue_free()
 
 func born(inipos):
@@ -87,10 +87,12 @@ func estourar():
 	audio.play()
 	
 func errou():
+	emit_signal("perde")
 	estourar()
 	print("Errou")
 	
 func acertou():
+	emit_signal("ponto")
 	estourar()
 	print("Acertou")
 
