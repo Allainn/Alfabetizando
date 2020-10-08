@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/font_button.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/icons/aviao.svg" type="Texture" id=2]
@@ -11,8 +11,22 @@
 [ext_resource path="res://assets/icons/igreja.svg" type="Texture" id=9]
 [ext_resource path="res://assets/icons/jacare.svg" type="Texture" id=10]
 [ext_resource path="res://assets/icons/laranja.svg" type="Texture" id=11]
+[ext_resource path="res://assets/icons/navio.svg" type="Texture" id=12]
 [ext_resource path="res://assets/icons/kiwi.svg" type="Texture" id=13]
 [ext_resource path="res://assets/icons/casa.svg" type="Texture" id=14]
+[ext_resource path="res://assets/icons/macaco.svg" type="Texture" id=15]
+[ext_resource path="res://assets/icons/robo.svg" type="Texture" id=16]
+[ext_resource path="res://assets/icons/yoga.svg" type="Texture" id=17]
+[ext_resource path="res://assets/icons/onibus.svg" type="Texture" id=18]
+[ext_resource path="res://assets/icons/urso.svg" type="Texture" id=19]
+[ext_resource path="res://assets/icons/zebra.svg" type="Texture" id=20]
+[ext_resource path="res://assets/icons/sapo.svg" type="Texture" id=21]
+[ext_resource path="res://assets/icons/whatsapp.svg" type="Texture" id=22]
+[ext_resource path="res://assets/icons/trem.svg" type="Texture" id=23]
+[ext_resource path="res://assets/icons/peixe.svg" type="Texture" id=24]
+[ext_resource path="res://assets/icons/vaca.svg" type="Texture" id=25]
+[ext_resource path="res://assets/icons/queijo.svg" type="Texture" id=26]
+[ext_resource path="res://assets/icons/xicara.svg" type="Texture" id=27]
 
 [node name="A_Z" type="Control"]
 anchor_right = 1.0
@@ -22,7 +36,7 @@ margin_top = 1.49835
 margin_right = 4.495
 margin_bottom = 1.49829
 __meta__ = {
-"_edit_horizontal_guides_": [ 50.224, 228.036, 244.299, 422.999, 438.854, 812.25, 828.489, 2052.89, 617.0, 633.0, 1007.38, 1023.81, 1202.11, 1217.73 ],
+"_edit_horizontal_guides_": [ 50.224, 228.036, 244.299, 422.999, 438.854, 812.25, 828.489, 2052.89, 617.0, 633.0, 1007.38, 1023.81, 1202.11, 1217.73, 2631.68 ],
 "_edit_use_anchors_": false,
 "_edit_vertical_guides_": [ 366.09, 802.384, 15.6735, 350.464, 701.41 ]
 }
@@ -36,8 +50,8 @@ __meta__ = {
 
 [node name="Control" type="Control" parent="ScrollContainer"]
 margin_right = 720.0
-margin_bottom = 2100.0
-rect_min_size = Vector2( 720, 2100 )
+margin_bottom = 2630.0
+rect_min_size = Vector2( 720, 2630 )
 
 [node name="ButtonA" type="Button" parent="ScrollContainer/Control"]
 margin_left = 10.9877
@@ -240,8 +254,8 @@ focus_mode = 0
 custom_fonts/font = ExtResource( 1 )
 action_mode = 0
 enabled_focus_mode = 0
-text = "E"
-icon = ExtResource( 6 )
+text = "M"
+icon = ExtResource( 15 )
 expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -256,8 +270,8 @@ focus_mode = 0
 custom_fonts/font = ExtResource( 1 )
 action_mode = 0
 enabled_focus_mode = 0
-text = "F"
-icon = ExtResource( 7 )
+text = "N"
+icon = ExtResource( 12 )
 expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -272,8 +286,8 @@ focus_mode = 0
 custom_fonts/font = ExtResource( 1 )
 action_mode = 0
 enabled_focus_mode = 0
-text = "G"
-icon = ExtResource( 8 )
+text = "O"
+icon = ExtResource( 18 )
 expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -288,8 +302,169 @@ focus_mode = 0
 custom_fonts/font = ExtResource( 1 )
 action_mode = 0
 enabled_focus_mode = 0
-text = "H"
-icon = ExtResource( 5 )
+text = "P"
+icon = ExtResource( 24 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonQ" type="Button" parent="ScrollContainer/Control"]
+margin_left = 10.37
+margin_top = 1605.63
+margin_right = 346.37
+margin_bottom = 1785.63
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+action_mode = 0
+enabled_focus_mode = 0
+text = "Q"
+icon = ExtResource( 26 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonR" type="Button" parent="ScrollContainer/Control"]
+margin_left = 362.0
+margin_top = 1606.0
+margin_right = 698.0
+margin_bottom = 1786.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+action_mode = 0
+enabled_focus_mode = 0
+text = "R"
+icon = ExtResource( 16 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonS" type="Button" parent="ScrollContainer/Control"]
+margin_left = 10.9877
+margin_top = 1801.15
+margin_right = 346.988
+margin_bottom = 1981.15
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+action_mode = 0
+enabled_focus_mode = 0
+text = "S"
+icon = ExtResource( 21 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonT" type="Button" parent="ScrollContainer/Control"]
+margin_left = 360.529
+margin_top = 1801.15
+margin_right = 696.529
+margin_bottom = 1981.15
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+action_mode = 0
+enabled_focus_mode = 0
+text = "T"
+icon = ExtResource( 23 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonU" type="Button" parent="ScrollContainer/Control"]
+margin_left = 10.37
+margin_top = 1995.63
+margin_right = 346.37
+margin_bottom = 2175.63
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+action_mode = 0
+enabled_focus_mode = 0
+text = "U"
+icon = ExtResource( 19 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonV" type="Button" parent="ScrollContainer/Control"]
+margin_left = 362.0
+margin_top = 1996.0
+margin_right = 698.0
+margin_bottom = 2176.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+action_mode = 0
+enabled_focus_mode = 0
+text = "V"
+icon = ExtResource( 25 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonW" type="Button" parent="ScrollContainer/Control"]
+margin_left = 10.5053
+margin_top = 2190.41
+margin_right = 346.505
+margin_bottom = 2370.41
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+action_mode = 0
+enabled_focus_mode = 0
+text = "W"
+icon = ExtResource( 22 )
+align = 0
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonX" type="Button" parent="ScrollContainer/Control"]
+margin_left = 361.415
+margin_top = 2190.28
+margin_right = 697.415
+margin_bottom = 2370.28
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+action_mode = 0
+enabled_focus_mode = 0
+text = "X"
+icon = ExtResource( 27 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonY" type="Button" parent="ScrollContainer/Control"]
+margin_left = 11.4219
+margin_top = 2384.99
+margin_right = 347.422
+margin_bottom = 2564.99
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+action_mode = 0
+enabled_focus_mode = 0
+text = "Y"
+icon = ExtResource( 17 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonZ" type="Button" parent="ScrollContainer/Control"]
+margin_left = 362.0
+margin_top = 2385.0
+margin_right = 698.0
+margin_bottom = 2565.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+action_mode = 0
+enabled_focus_mode = 0
+text = "Z"
+icon = ExtResource( 20 )
 expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
