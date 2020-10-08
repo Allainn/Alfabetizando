@@ -35,8 +35,8 @@ func _on_Genarator_timeout():
 	obj.set_letra_certa(letra)
 	obj.born(Vector2(rand_range(90, 630), 1500))
 	
-	obj.connect("perde", self, "dec_life")
-	obj.connect("ponto", self, "inc_score")
+	obj.connect("ponto", self, "_inc_score")
+	obj.connect("perde", self, "_dec_life")
 	
 	baloes.add_child(obj)
 
@@ -61,15 +61,15 @@ func _on_Parar_timeout():
 	genaratorCerta.stop()
 	gerarLetra.start()
 	
-func dec_life():
-	print("Entrou")
+func _dec_life():
 	lifes -= 1
 	if lifes == 0:
 		print("GameOver")
 	else:
 		print("Lifes: ", lifes)
 		
-func inc_score():
+func _inc_score():
+	print("Entrou")
 	if lifes == 0: return
 	score += 1
 	print("Score: ", score)
