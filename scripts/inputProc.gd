@@ -15,6 +15,7 @@ func _physics_process(_delta):
 		var result = space_state.intersect_point(curpos)
 		if not result.empty():
 			if result[0].collider.letra == letra:
+				print("entrou")
 				result[0].collider.acertou()
 			else:
 				result[0].collider.errou()
