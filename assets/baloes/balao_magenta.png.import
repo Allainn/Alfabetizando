@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/balao.png-0ab3116e3f52a00b7f73068361dc8809.stex"
+path="res://.import/balao_magenta.png-f59634bb04fc1538bbea09361c0cdac3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/balao.png"
-dest_files=[ "res://.import/balao.png-0ab3116e3f52a00b7f73068361dc8809.stex" ]
+source_file="res://assets/baloes/balao_magenta.png"
+dest_files=[ "res://.import/balao_magenta.png-f59634bb04fc1538bbea09361c0cdac3.stex" ]
 
 [params]
 

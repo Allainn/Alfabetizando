@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/estouro.png-27d2097409d1c006ac71c2ad2b94c65a.stex"
+path="res://.import/estouro_azul_m.png-c3a02ef69a71cf839f01c9c06a8bcebd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/estouro.png"
-dest_files=[ "res://.import/estouro.png-27d2097409d1c006ac71c2ad2b94c65a.stex" ]
+source_file="res://assets/estouros/estouro_azul_m.png"
+dest_files=[ "res://.import/estouro_azul_m.png-c3a02ef69a71cf839f01c9c06a8bcebd.stex" ]
 
 [params]
 
