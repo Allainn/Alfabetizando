@@ -1,0 +1,11 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://assets/fonts/Frankfurter D Regular.ttf" type="DynamicFontData" id=1]
+
+[resource]
+size = 110
+outline_size = 10
+outline_color = Color( 0.898039, 0.435294, 0.0980392, 1 )
+use_filter = true
+extra_spacing_char = 32
+font_data = ExtResource( 1 )
