@@ -1,8 +1,72 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://scripts/inputProc.gd" type="Script" id=2]
 [ext_resource path="res://assets/fundo_jogo_balao.png" type="Texture" id=3]
+[ext_resource path="res://assets/baloes/balao_azul.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/font_score.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/baloes/balao_magenta.png" type="Texture" id=6]
+[ext_resource path="res://assets/baloes/balao_azul_m_escuro.png" type="Texture" id=7]
+[ext_resource path="res://assets/baloes/balao_verde_escuro.png" type="Texture" id=8]
+[ext_resource path="res://assets/baloes/balao_vermelho.png" type="Texture" id=9]
+[ext_resource path="res://assets/fonts/font_score_label.tres" type="DynamicFont" id=10]
+[ext_resource path="res://assets/fonts/font_jogar_novamente.tres" type="DynamicFont" id=11]
+[ext_resource path="res://assets/fonts/font_score_final.tres" type="DynamicFont" id=12]
+[ext_resource path="res://scripts/game_over.gd" type="Script" id=13]
+[ext_resource path="res://assets/fonts/font_titulo_alfabeto_asd.tres" type="DynamicFont" id=14]
+[ext_resource path="res://assets/baloes/balao_verde.png" type="Texture" id=15]
+
+[sub_resource type="Animation" id=1]
+resource_name = "GameOver"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 8 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Balao:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 190.26, 1300 ), Vector2( 190.26, 1300 ), Vector2( 190.26, 384.828 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label3:visible_characters")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5, 2.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 6 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ScoreFinal:visible_characters")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.3, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 3 ]
+}
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -31,7 +95,181 @@ autostart = true
 
 [node name="GerarLetra" type="Timer" parent="."]
 wait_time = 2.7
+
+[node name="Control" type="Control" parent="."]
+margin_right = 720.0
+margin_bottom = 1279.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Balao1" type="TextureRect" parent="Control"]
+margin_left = 648.225
+margin_top = 11.9865
+margin_right = 1522.22
+margin_bottom = 1245.99
+rect_scale = Vector2( 0.07, 0.067 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Balao2" type="TextureRect" parent="Control"]
+margin_left = 575.225
+margin_top = 11.9865
+margin_right = 1449.22
+margin_bottom = 1245.99
+rect_scale = Vector2( 0.07, 0.067 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Balao3" type="TextureRect" parent="Control"]
+margin_left = 503.225
+margin_top = 11.9865
+margin_right = 1377.22
+margin_bottom = 1245.99
+rect_scale = Vector2( 0.07, 0.067 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Balao4" type="TextureRect" parent="Control"]
+margin_left = 430.225
+margin_top = 11.9865
+margin_right = 1304.22
+margin_bottom = 1245.99
+rect_scale = Vector2( 0.07, 0.067 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Balao5" type="TextureRect" parent="Control"]
+margin_left = 357.225
+margin_top = 11.9865
+margin_right = 1231.22
+margin_bottom = 1245.99
+rect_scale = Vector2( 0.07, 0.067 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="Control"]
+margin_left = 6.0
+margin_top = 53.0
+margin_right = 105.0
+margin_bottom = 114.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.0313726, 0, 1, 1 )
+text = "000"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 7.59464
+margin_top = 8.95142
+margin_right = 129.595
+margin_bottom = 49.9514
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PONTOS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOverScreen" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="GameOverScreen"]
+margin_right = 724.0
+margin_bottom = 1286.0
+color = Color( 0, 0, 0, 0.568627 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Balao" type="TextureRect" parent="GameOverScreen"]
+margin_left = 190.26
+margin_top = 1300.0
+margin_right = 1064.26
+margin_bottom = 2534.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GameOverScreen"]
+margin_left = 11.3126
+margin_top = 207.88
+margin_right = 724.313
+margin_bottom = 381.88
+custom_fonts/font = ExtResource( 14 )
+text = "GAME OVER"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="GameOverScreen"]
+visible = false
+margin_left = 30.5228
+margin_top = 916.489
+margin_right = 675.523
+margin_bottom = 1091.49
+custom_fonts/font = ExtResource( 11 )
+text = "TOQUE PARA 
+JOGAR NOVAMENTE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="GameOverScreen"]
+margin_left = 234.881
+margin_top = 622.562
+margin_right = 490.881
+margin_bottom = 708.562
+custom_fonts/font = ExtResource( 11 )
+text = "PONTOS"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreFinal" type="Label" parent="GameOverScreen"]
+margin_left = 193.0
+margin_top = 463.0
+margin_right = 508.0
+margin_bottom = 654.0
+custom_fonts/font = ExtResource( 12 )
+text = "000"
+align = 1
+valign = 1
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GameOverScreen"]
+anims/GameOver = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="GameOverScreen"]
+wait_time = 4.0
 [connection signal="timeout" from="GenaratorAleatoria" to="." method="_on_Genarator_timeout"]
 [connection signal="timeout" from="GenaratorCerta" to="." method="_on_GenaratorCerta_timeout"]
 [connection signal="timeout" from="Parar" to="." method="_on_Parar_timeout"]
 [connection signal="timeout" from="GerarLetra" to="." method="_on_GerarLetra_timeout"]
+[connection signal="timeout" from="GameOverScreen/Timer" to="GameOverScreen" method="_on_Timer_timeout"]
