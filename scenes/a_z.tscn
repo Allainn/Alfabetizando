@@ -27,7 +27,6 @@
 [ext_resource path="res://assets/icons/vaca.svg" type="Texture" id=25]
 [ext_resource path="res://assets/icons/queijo.svg" type="Texture" id=26]
 [ext_resource path="res://assets/icons/xicara.svg" type="Texture" id=27]
-[ext_resource path="res://assets/fundo_jogo_balao.png" type="Texture" id=28]
 [ext_resource path="res://assets/fonts/font_titulo_alfabeto_vermelho.tres" type="DynamicFont" id=29]
 [ext_resource path="res://assets/fonts/font_botao_azul.tres" type="DynamicFont" id=30]
 [ext_resource path="res://assets/fonts/font_botao_vermelho.tres" type="DynamicFont" id=31]
@@ -45,6 +44,10 @@
 [ext_resource path="res://assets/fonts/font_titulo_alfabeto_laranja.tres" type="DynamicFont" id=43]
 [ext_resource path="res://assets/fonts/font_titulo_alfabeto_amarelo.tres" type="DynamicFont" id=44]
 
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/fundo_jogo_balao.png-7f8c8ee60c17c91408318613bbcfbdb6.stex"
+
 [node name="A_Z" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -61,7 +64,7 @@ __meta__ = {
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( -8.47571, 0 )
 scale = Vector2( 0.183523, 0.214295 )
-texture = ExtResource( 28 )
+texture = SubResource( 1 )
 centered = false
 
 [node name="Titulo" type="Control" parent="."]

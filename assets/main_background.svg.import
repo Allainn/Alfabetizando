@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fundo_jogo_balao.png-7f8c8ee60c17c91408318613bbcfbdb6.stex"
+path="res://.import/main_background.svg-be45d354ad37a770ac8abe3f0d29f29b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fundo_jogo_balao.png"
-dest_files=[ "res://.import/fundo_jogo_balao.png-7f8c8ee60c17c91408318613bbcfbdb6.stex" ]
+source_file="res://assets/main_background.svg"
+dest_files=[ "res://.import/main_background.svg-be45d354ad37a770ac8abe3f0d29f29b.stex" ]
 
 [params]
 

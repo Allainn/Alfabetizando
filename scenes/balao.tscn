@@ -50,10 +50,10 @@ texture = ExtResource( 1 )
 anims/Estouro = SubResource( 1 )
 
 [node name="Letra" type="Label" parent="."]
-margin_left = -96.4907
-margin_top = -91.1453
-margin_right = 79.5093
-margin_bottom = 94.8547
+margin_left = -86.9966
+margin_top = -119.712
+margin_right = 85.0034
+margin_bottom = 76.2881
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "A"
