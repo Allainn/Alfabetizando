@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Alfabetizando"
+run/main_scene="res://scenes/main.tscn"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
 

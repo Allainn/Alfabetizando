@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://scripts/inputProc.gd" type="Script" id=2]
@@ -22,6 +22,9 @@
 [ext_resource path="res://assets/fonts/font_botao_azul2.tres" type="DynamicFont" id=20]
 [ext_resource path="res://assets/fonts/font_botao_azul.tres" type="DynamicFont" id=21]
 [ext_resource path="res://assets/fonts/font_botao_roxo.tres" type="DynamicFont" id=22]
+[ext_resource path="res://assets/icons/voltar.svg" type="Texture" id=23]
+[ext_resource path="res://assets/fonts/font_button.tres" type="DynamicFont" id=24]
+[ext_resource path="res://assets/icons/novamente.svg" type="Texture" id=25]
 
 [sub_resource type="Animation" id=1]
 resource_name = "GameOver"
@@ -171,18 +174,15 @@ texture = ExtResource( 3 )
 
 [node name="GenaratorAleatoria" type="Timer" parent="."]
 wait_time = 1.5
-autostart = true
 
 [node name="InputProc" type="Node2D" parent="."]
 script = ExtResource( 2 )
 
 [node name="GenaratorCerta" type="Timer" parent="."]
 wait_time = 2.0
-autostart = true
 
 [node name="Parar" type="Timer" parent="."]
 wait_time = 10.0
-autostart = true
 
 [node name="GerarLetra" type="Timer" parent="."]
 wait_time = 2.7
@@ -301,6 +301,7 @@ __meta__ = {
 }
 
 [node name="G" type="Label" parent="GameOverScreen/GameOver"]
+visible = false
 margin_left = 78.2182
 margin_top = -89.7818
 margin_right = 185.218
@@ -312,6 +313,7 @@ __meta__ = {
 }
 
 [node name="A" type="Label" parent="GameOverScreen/GameOver"]
+visible = false
 margin_left = 217.0
 margin_top = -88.0
 margin_right = 314.0
@@ -323,6 +325,7 @@ __meta__ = {
 }
 
 [node name="M" type="Label" parent="GameOverScreen/GameOver"]
+visible = false
 margin_left = 352.0
 margin_top = -88.0
 margin_right = 479.0
@@ -334,6 +337,7 @@ __meta__ = {
 }
 
 [node name="E" type="Label" parent="GameOverScreen/GameOver"]
+visible = false
 margin_left = 516.0
 margin_top = -88.0
 margin_right = 623.0
@@ -345,6 +349,7 @@ __meta__ = {
 }
 
 [node name="O" type="Label" parent="GameOverScreen/GameOver"]
+visible = false
 margin_left = 104.548
 margin_top = 56.0514
 margin_right = 221.548
@@ -356,6 +361,7 @@ __meta__ = {
 }
 
 [node name="V" type="Label" parent="GameOverScreen/GameOver"]
+visible = false
 margin_left = 251.548
 margin_top = 56.0514
 margin_right = 345.548
@@ -367,6 +373,7 @@ __meta__ = {
 }
 
 [node name="E2" type="Label" parent="GameOverScreen/GameOver"]
+visible = false
 margin_left = 384.767
 margin_top = 56.0514
 margin_right = 466.767
@@ -378,6 +385,7 @@ __meta__ = {
 }
 
 [node name="R" type="Label" parent="GameOverScreen/GameOver"]
+visible = false
 margin_left = 498.548
 margin_top = 56.0514
 margin_right = 605.548
@@ -390,25 +398,11 @@ __meta__ = {
 
 [node name="Balao" type="TextureRect" parent="GameOverScreen"]
 margin_left = 190.26
-margin_top = 439.0
+margin_top = 1300.0
 margin_right = 1064.26
-margin_bottom = 1673.0
+margin_bottom = 2534.0
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 15 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label2" type="Label" parent="GameOverScreen"]
-visible = false
-margin_left = 30.5228
-margin_top = 976.489
-margin_right = 694.523
-margin_bottom = 1151.49
-custom_fonts/font = ExtResource( 11 )
-text = "TOQUE PARA 
-JOGAR NOVAMENTE"
-align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -420,6 +414,7 @@ margin_right = 502.881
 margin_bottom = 747.562
 custom_fonts/font = ExtResource( 11 )
 text = "PONTOS"
+percent_visible = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -433,6 +428,7 @@ custom_fonts/font = ExtResource( 12 )
 text = "000"
 align = 1
 valign = 1
+percent_visible = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -442,8 +438,43 @@ anims/GameOver = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="GameOverScreen"]
 wait_time = 4.0
+
+[node name="Jogar" type="Button" parent="GameOverScreen"]
+visible = false
+margin_left = 162.747
+margin_top = 953.896
+margin_right = 572.747
+margin_bottom = 1040.9
+custom_fonts/font = ExtResource( 24 )
+text = "JOGAR"
+icon = ExtResource( 25 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="Button" parent="GameOverScreen"]
+visible = false
+margin_left = 162.941
+margin_top = 1065.06
+margin_right = 572.941
+margin_bottom = 1152.06
+custom_fonts/font = ExtResource( 24 )
+text = "VOLTAR"
+icon = ExtResource( 23 )
+expand_icon = true
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+
+[node name="Iniciar" type="Timer" parent="."]
+wait_time = 5.2
+one_shot = true
+autostart = true
 [connection signal="timeout" from="GenaratorAleatoria" to="." method="_on_Genarator_timeout"]
 [connection signal="timeout" from="GenaratorCerta" to="." method="_on_GenaratorCerta_timeout"]
 [connection signal="timeout" from="Parar" to="." method="_on_Parar_timeout"]
 [connection signal="timeout" from="GerarLetra" to="." method="_on_GerarLetra_timeout"]
 [connection signal="timeout" from="GameOverScreen/Timer" to="GameOverScreen" method="_on_Timer_timeout"]
+[connection signal="pressed" from="GameOverScreen/Jogar" to="GameOverScreen" method="_on_Jogar_pressed"]
+[connection signal="pressed" from="GameOverScreen/Voltar" to="GameOverScreen" method="_on_Voltar_pressed"]
+[connection signal="timeout" from="Iniciar" to="." method="_on_Iniciar_timeout"]

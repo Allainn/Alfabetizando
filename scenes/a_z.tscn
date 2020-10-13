@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://assets/fonts/font_botao_verde2.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/icons/aviao.svg" type="Texture" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://assets/icons/vaca.svg" type="Texture" id=25]
 [ext_resource path="res://assets/icons/queijo.svg" type="Texture" id=26]
 [ext_resource path="res://assets/icons/xicara.svg" type="Texture" id=27]
+[ext_resource path="res://assets/sons/a.tres" type="AudioStream" id=28]
 [ext_resource path="res://assets/fonts/font_titulo_alfabeto_vermelho.tres" type="DynamicFont" id=29]
 [ext_resource path="res://assets/fonts/font_botao_azul.tres" type="DynamicFont" id=30]
 [ext_resource path="res://assets/fonts/font_botao_vermelho.tres" type="DynamicFont" id=31]
@@ -43,10 +44,10 @@
 [ext_resource path="res://assets/fonts/font_titulo_alfabeto_azul.tres" type="DynamicFont" id=42]
 [ext_resource path="res://assets/fonts/font_titulo_alfabeto_laranja.tres" type="DynamicFont" id=43]
 [ext_resource path="res://assets/fonts/font_titulo_alfabeto_amarelo.tres" type="DynamicFont" id=44]
-
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/fundo_jogo_balao.png-7f8c8ee60c17c91408318613bbcfbdb6.stex"
+[ext_resource path="res://scripts/a_z.gd" type="Script" id=45]
+[ext_resource path="res://assets/game_background.svg" type="Texture" id=46]
+[ext_resource path="res://assets/icons/voltar.svg" type="Texture" id=47]
+[ext_resource path="res://assets/fonts/font_button.tres" type="DynamicFont" id=48]
 
 [node name="A_Z" type="Control"]
 anchor_right = 1.0
@@ -55,16 +56,17 @@ margin_left = 4.495
 margin_top = 1.49835
 margin_right = 4.495
 margin_bottom = 1.49829
+script = ExtResource( 45 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 20.2736, 228.036, 244.299, 422.999, 438.854, 812.25, 828.489, 2052.89, 617.0, 633.0, 1007.38, 1023.81, 1202.11, 1217.73, 2752.74, 163.873, 106.16 ],
+"_edit_horizontal_guides_": [ 20.2736, 204.525, 422.999, 438.854, 812.25, 828.489, 2052.89, 617.0, 633.0, 1007.38, 1023.81, 1202.11, 1217.73, 2729.89 ],
 "_edit_use_anchors_": false,
 "_edit_vertical_guides_": [ 366.09, 802.384, 19.8541, 350.464, 741.482 ]
 }
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( -8.47571, 0 )
-scale = Vector2( 0.183523, 0.214295 )
-texture = SubResource( 1 )
+scale = Vector2( 0.670426, 0.667608 )
+texture = ExtResource( 46 )
 centered = false
 
 [node name="Titulo" type="Control" parent="."]
@@ -182,15 +184,15 @@ __meta__ = {
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_top = 175.0
 margin_right = 720.0
-margin_bottom = 1284.0
+margin_bottom = 1158.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Control" type="Control" parent="ScrollContainer"]
 margin_right = 720.0
-margin_bottom = 2600.0
-rect_min_size = Vector2( 720, 2600 )
+margin_bottom = 2552.0
+rect_min_size = Vector2( 720, 2552 )
 
 [node name="ButtonA" type="Button" parent="ScrollContainer/Control"]
 margin_left = 10.9877
@@ -402,10 +404,10 @@ __meta__ = {
 }
 
 [node name="ButtonN" type="Button" parent="ScrollContainer/Control"]
-margin_left = 360.529
-margin_top = 1196.15
-margin_right = 696.529
-margin_bottom = 1376.15
+margin_left = 361.196
+margin_top = 1195.48
+margin_right = 697.196
+margin_bottom = 1375.48
 focus_mode = 0
 custom_fonts/font = ExtResource( 31 )
 action_mode = 0
@@ -609,3 +611,46 @@ expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+
+[node name="Voltar" type="Button" parent="."]
+margin_left = 153.0
+margin_top = 1175.0
+margin_right = 557.0
+margin_bottom = 1266.0
+custom_fonts/font = ExtResource( 48 )
+text = "VOLTAR"
+icon = ExtResource( 47 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ScrollContainer/Control/ButtonA" to="." method="_on_ButtonA_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonB" to="." method="_on_ButtonB_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonC" to="." method="_on_ButtonC_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonD" to="." method="_on_ButtonD_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonE" to="." method="_on_ButtonE_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonF" to="." method="_on_ButtonF_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonG" to="." method="_on_ButtonG_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonH" to="." method="_on_ButtonH_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonI" to="." method="_on_ButtonI_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonJ" to="." method="_on_ButtonJ_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonK" to="." method="_on_ButtonK_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonL" to="." method="_on_ButtonL_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonM" to="." method="_on_ButtonM_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonN" to="." method="_on_ButtonN_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonO" to="." method="_on_ButtonO_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonP" to="." method="_on_ButtonP_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonQ" to="." method="_on_ButtonQ_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonR" to="." method="_on_ButtonR_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonS" to="." method="_on_ButtonS_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonT" to="." method="_on_ButtonT_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonU" to="." method="_on_ButtonU_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonV" to="." method="_on_ButtonV_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonW" to="." method="_on_ButtonW_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonX" to="." method="_on_ButtonX_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonY" to="." method="_on_ButtonY_pressed"]
+[connection signal="pressed" from="ScrollContainer/Control/ButtonZ" to="." method="_on_ButtonZ_pressed"]
+[connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
